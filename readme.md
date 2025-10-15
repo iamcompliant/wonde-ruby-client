@@ -330,6 +330,9 @@ client = Wonde::Client.new('TOKEN_GOES_HERE')
 
 school = client.school('SCHOOL_ID_GOES_HERE')
 
+# Get single employee
+employee = school.employees.get('EMPLOYEE_ID_GOES_HERE')
+
 # Get employees
 school.employees.all().each do |employee|
     p employee.forename + ' ' + employee.surname
