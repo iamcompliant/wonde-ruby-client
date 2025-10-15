@@ -23,6 +23,7 @@ module Wonde
   autoload :MedicalEvents, 'endpoints/medicalevents'
   autoload :MedicalNotes, 'endpoints/medicalnotes'
   autoload :Meta, 'endpoints/meta'
+  autoload :Permissions, 'endpoints/permissions'
   autoload :Periods, 'endpoints/periods'
   autoload :Photos, 'endpoints/photos'
   autoload :Rooms, 'endpoints/rooms'

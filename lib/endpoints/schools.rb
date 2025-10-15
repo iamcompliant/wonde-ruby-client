@@ -3,8 +3,9 @@ module Wonde
     attr_accessor :uri, :achievements, :attendance, :behaviours, :classes,
                   :contacts, :counts, :employees, :groups, :lessons,
                   :lessonAttendance, :medicalConditions, :medicalEvents,
-                  :medicalNotes, :periods, :photos, :rooms, :subjects, :students,
-                  :assessment, :deletions, :events, :attendanceSummaries
+                  :medicalNotes, :permissions, :periods, :photos, :rooms,
+                  :subjects, :students, :assessment, :deletions, :events,
+                  :attendanceSummaries
     @@uri = 'schools/'
     def initialize(token, id=false)
       super(token, id)
@@ -29,6 +30,7 @@ module Wonde
       self.medicalConditions   = Wonde::MedicalConditions.new(token, self.uri)
       self.medicalEvents       = Wonde::MedicalEvents.new(token, self.uri)
       self.medicalNotes        = Wonde::MedicalNotes.new(token, self.uri)
+      self.permissions         = Wonde::Permissions.new(token, 'meta/' + self.uri)
       self.periods             = Wonde::Periods.new(token, self.uri)
       self.photos              = Wonde::Photos.new(token, self.uri)
       self.rooms               = Wonde::Rooms.new(token, self.uri)

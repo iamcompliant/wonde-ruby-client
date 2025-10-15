@@ -529,3 +529,17 @@ client = Wonde::Client.new('TOKEN_GOES_HERE')
 # GET school meta data
 meta_object = client.meta.get('SCHOOL_ID_GOES_HERE')
 ```
+
+### Permissions
+
+```ruby
+require 'wondeclient'
+client = Wonde::Client.new('TOKEN_GOES_HERE')
+
+school = client.school('SCHOOL_ID_GOES_HERE')
+
+# Get permissions
+school.permissions.all().each do |permission|
+    p permission.name
+end
+```
