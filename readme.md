@@ -528,10 +528,4 @@ client = Wonde::Client.new('TOKEN_GOES_HERE')
 
 # GET school meta data
 meta_object = client.meta.get('SCHOOL_ID_GOES_HERE')
-
-# GET Applied Permissions
-permissions = client.meta.permissions('SCHOOL_ID_GOES_HERE')
-
-# GET Access Control List
-acl_object = client.meta.acl('SCHOOL_ID_GOES_HERE')
 ```
