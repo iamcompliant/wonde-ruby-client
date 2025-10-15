@@ -526,7 +526,7 @@ end
 require 'wondeclient'
 client = Wonde::Client.new('TOKEN_GOES_HERE')
 
-# GET School Meta Data
+# GET school meta data
 meta_object = client.meta.get('SCHOOL_ID_GOES_HERE')
 
 # GET Applied Permissions
