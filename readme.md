@@ -519,3 +519,19 @@ school.subjects.all().each do |subject|
     p subject.name
 end
 ```
+
+### Meta
+
+```ruby
+require 'wondeclient'
+client = Wonde::Client.new('TOKEN_GOES_HERE')
+
+# GET School Meta Data
+meta_object = client.meta.get('SCHOOL_ID_GOES_HERE')
+
+# GET Applied Permissions
+permissions = client.meta.permissions('SCHOOL_ID_GOES_HERE')
+
+# GET Access Control List
+acl_object = client.meta.acl('SCHOOL_ID_GOES_HERE')
+```
