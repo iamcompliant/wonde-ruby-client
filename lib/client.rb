@@ -45,6 +45,18 @@ module Wonde
       return Wonde::Schools.new(@token, id)
     end
 
+    # Get Meta Object
+    #
+    # @param schoolId [String]
+    # @return [Object]
+    #
+    # @example
+    #   client = Wonde::Client.new("SOMETOKEN")
+    #   meta_object = client.meta('SCHOOLID')
+    def meta(schoolId)
+      return Wonde::Meta.new(@token, schoolId)
+    end
+
     # requestAccess endpoint POST
     #
     # @param schoolId [String]
