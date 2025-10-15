@@ -14,7 +14,7 @@ module Wonde
   #     p school.name
   #   end
   class Client
-    attr_accessor :schools, :attendanceCodes, :token
+    attr_accessor :schools, :meta, :attendanceCodes, :token
     @@attendanceCodes
     @@token
     @@version = '0.0.6'
@@ -29,6 +29,7 @@ module Wonde
       @@token = token
       @token = token
       @schools = Wonde::Schools.new(token)
+      @meta = Wonde::Meta.new(token)
       @attendanceCodes = Wonde::AttendanceCodes.new(token)
     end
 
